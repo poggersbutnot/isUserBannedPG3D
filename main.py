@@ -5,7 +5,7 @@ print("Welcome! Script Start[:"+ strftime("%H:%M:%S") + ":]")
 
 print('<' + '=' * 20 + "[Settings Area]" + '=' * 20 + '>')
 
-device = str(input("Enter Your Device: (Default: 101)(IOS: 0)(Android: 1)(MetroPlayerX64: 2)(Amazon: 3) "))
+device = str(input("Enter A Device OS: (Default: 101)(IOS: 0)(Android: 1)(MetroPlayerX64: 2)(Amazon: 3) "))
 if not device:
     device = '101'
     print("Device Automatically set to Default(" + device + ")")
