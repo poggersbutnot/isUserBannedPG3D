@@ -25,7 +25,7 @@ if not type:
     type = '1'
     print("device_type automatically set to 1")
 if type:
-    print("device_type automatically set to 1")
+    print("device_type remotley set to ", type)
 
 device = str(input("Enter Your Device OS: (Default: 101)(IOS: 0)(Android: 1)(MetroPlayerX64: 2)(Amazon: 3) "))
 if not device:
@@ -79,5 +79,6 @@ elif(r == "File not found."):
     print("PHP File was deleted.")  
 else:
     print("pixelgun-config may have been deleted (or the servers were swapped.)")
+
 
 
