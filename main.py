@@ -5,6 +5,13 @@ print("Welcome! Script Start[:"+ strftime("%H:%M:%S") + ":]")
 
 print('<' + '=' * 20 + "[Settings Area]" + '=' * 20 + '>')
 
+device = str(input("Enter Your Device: (Default: 101)(IOS: 0)(Android: 1)(MetroPlayerX64: 2)(Amazon: 3) "))
+if not device:
+    device = '101'
+    print("Device Automatically set to Default(" + device + ")")
+elif device:
+    print("Device remotley set to ", device)
+
 id = str(input('Player ID to search: '))
 if not id:
     id = '192819483'
@@ -29,8 +36,8 @@ elif url != 'https://secure.pixelgunserver.com/pixelgun3d-config/getBanList.php'
 else:
     print(" Connected ✅")
 data = {
-    'app_version': ver,
-    'id': id
+    'app_version': device + ":" + ver,
+    'id': id     #192819483 This is a banned id.
 }
 r = post(url, data=data)
 r = r.text
