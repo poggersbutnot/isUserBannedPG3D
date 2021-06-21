@@ -5,7 +5,7 @@ print("Welcome! Script Start[:"+ strftime("%H:%M:%S") + ":]")
 
 print('<' + '=' * 20 + "[Settings Area]" + '=' * 20 + '>')
 
-type = str(input("""Enter your device type:
+type = str(input("""Enter a device type:
 PowerVR: 15 / 14
 Intel HD Graphics: 8 , 
 Vivante: 5 / 6 , 
