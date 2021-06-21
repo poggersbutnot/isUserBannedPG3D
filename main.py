@@ -5,12 +5,35 @@ print("Welcome! Script Start[:"+ strftime("%H:%M:%S") + ":]")
 
 print('<' + '=' * 20 + "[Settings Area]" + '=' * 20 + '>')
 
-device = str(input("Enter A Device OS: (Default: 101)(IOS: 0)(Android: 1)(MetroPlayerX64: 2)(Amazon: 3) "))
+type = str(input("""Enter your device type:
+PowerVR: 15 / 14
+Adreno (TM) 320: 11 , 
+Intel HD Graphics: 8 , 
+Vivante: 5 / 6 , 
+VideoCore: 4 , 
+NVIDIA: 3 / 5 , 
+Vivante GC: 3 ,  
+PowerVR SGX : 1 / 2 / 4 / 8/ 11,
+Adreno (TM): 1 , 
+Immersion.16: 1 , 
+Bluestacks: 1 , 
+GC core: 1 , 
+Mali: 1 / 4 / 6 / 8 / 11 ,
+GC400 core: 1 , 
+S5 Multicore c: 1 """))
+if not type:
+    type = '1'
+    print("device_type automatically set to 1")
+if type:
+    print("device_type automatically set to 1")
+
+device = str(input("Enter Your Device OS: (Default: 101)(IOS: 0)(Android: 1)(MetroPlayerX64: 2)(Amazon: 3) "))
 if not device:
     device = '101'
     print("Device Automatically set to Default(" + device + ")")
 elif device:
     print("Device remotley set to ", device)
+    
 
 id = str(input('Player ID to search: '))
 if not id:
@@ -37,6 +60,9 @@ else:
     print(" Connected ✅")
 data = {
     'app_version': device + ":" + ver,
+    'ver': ver,
+    'platform': device,
+    'type_device': type, 
     'id': id
 }
 r = post(url, data=data)
@@ -53,3 +79,5 @@ elif(r == "File not found."):
     print("PHP File was deleted.")  
 else:
     print("pixelgun-config may have been deleted (or the servers were swapped.)")
+
+
