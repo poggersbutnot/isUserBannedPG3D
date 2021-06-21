@@ -20,7 +20,7 @@ Bluestacks: 1 ,
 GC core: 1 , 
 Mali: 1 / 4 / 6 / 8 / 11 ,
 GC400 core: 1 , 
-S5 Multicore c: 1 """))
+S5 Multicore c: 1 : """))
 if not type:
     type = '1'
     print("device_type automatically set to 1")
