@@ -7,14 +7,13 @@ print('<' + '=' * 20 + "[Settings Area]" + '=' * 20 + '>')
 
 type = str(input("""Enter your device type:
 PowerVR: 15 / 14
-Adreno (TM) 320: 11 , 
 Intel HD Graphics: 8 , 
 Vivante: 5 / 6 , 
 VideoCore: 4 , 
 NVIDIA: 3 / 5 , 
 Vivante GC: 3 ,  
 PowerVR SGX : 1 / 2 / 4 / 8/ 11,
-Adreno (TM): 1 , 
+Adreno (TM): 1 / 4 / 8 / 11 , 
 Immersion.16: 1 , 
 Bluestacks: 1 , 
 GC core: 1 , 
