@@ -30,7 +30,7 @@ else:
     print(" Connected ✅")
 data = {
     'app_version': ver,
-    'id': id     #192819483 This is a banned id.
+    'id': id
 }
 r = post(url, data=data)
 r = r.text
