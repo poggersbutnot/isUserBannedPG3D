@@ -1,5 +1,6 @@
 from requests import post
 from time import strftime
+from requests import get
 # Script by poggersbutnot. Github: poggersbutnot
 print("Welcome! Script Start[:"+ strftime("%H:%M:%S") + ":]")
 
@@ -40,12 +41,12 @@ if not id:
 elif id:
     print("ID set to ("+ id + ")")
 
-ver = str(input("Version: "))
+ver = str(input('Version: '))
 if not ver:
-    ver = '21.4.1'
-    print("Version has been automatically set to: "+ ver)
+    ver = get('https://cfg.pixelgun3d.com/config.json').text.replace(']', '').replace('[', '').replace('"', '')
+    print("Version automatically set to the latest version: "+ ver)
 elif ver is ver:
-    print("Version Remotley set by user to "+ ver)
+    print('Version Remotley set by user to ' + ver)
 
 url = 'https://secure.pixelgunserver.com/pixelgun3d-config/getBanList.php'
 if url is None:
@@ -77,6 +78,3 @@ elif(r == "File not found."):
     print("PHP File was deleted.")  
 else:
     print("pixelgun-config may have been deleted (or the servers were swapped.)")
-
-
-
